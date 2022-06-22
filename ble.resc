@@ -1,0 +1,16 @@
+emulation CreateWirelessMedium "wireless"
+emulation SetGlobalQuantum "0.00001"
+
+mach create "central";
+machine LoadPlatformDescription @platforms/cpus/nrf52840.repl;
+connector Connect sysbus.radio wireless;
+sysbus LoadELF @hello_world/build/zephyr/zephyr.elf;
+showAnalyzer sysbus.uart0;
+
+mach create "peripheral";
+machine LoadPlatformDescription @platforms/cpus/nrf52840.repl;
+connector Connect sysbus.radio wireless;
+sysbus LoadELF @hello_world_peripheral/build/zephyr/zephyr.elf;
+showAnalyzer sysbus.uart0;
+
+start;
