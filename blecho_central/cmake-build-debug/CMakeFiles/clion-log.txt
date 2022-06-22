@@ -1,0 +1,26 @@
+"C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" C:\Users\vnrju\zephyrproject\zephyr\samples\hello_world
+Loading Zephyr default modules (Zephyr base (cached)).
+-- Application: C:/Users/vnrju/zephyrproject/zephyr/samples/hello_world
+-- Cache files will be written to: C:/Users/vnrju/zephyrproject/zephyr/.cache
+-- Zephyr version: 3.1.99 (C:/Users/vnrju/zephyrproject/zephyr)
+-- Board: nrf52840dk_nrf52840
+-- Found host-tools: zephyr 0.14.2 (C:/Users/vnrju/zephyr-sdk-0.14.2)
+-- Found dtc: C:/ProgramData/chocolatey/bin/dtc.exe (found suitable version "1.5.0", minimum required is "1.4.6")
+-- Found toolchain: zephyr 0.14.2 (C:/Users/vnrju/zephyr-sdk-0.14.2)
+-- Found BOARD.dts: C:/Users/vnrju/zephyrproject/zephyr/boards/arm/nrf52840dk_nrf52840/nrf52840dk_nrf52840.dts
+Traceback (most recent call last):
+  File "C:\Users\vnrju\zephyrproject\zephyr\scripts\dts\gen_defines.py", line 33, in <module>
+    from devicetree import edtlib
+  File "C:\Users\vnrju\zephyrproject\zephyr\scripts\dts\python-devicetree\src\devicetree\edtlib.py", line 77, in <module>
+    import yaml
+ModuleNotFoundError: No module named 'yaml'
+CMake Error at C:/Users/vnrju/zephyrproject/zephyr/cmake/modules/dts.cmake:213 (message):
+  gen_defines.py failed with return code: 1
+Call Stack (most recent call first):
+  C:/Users/vnrju/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:121 (include)
+  C:/Users/vnrju/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
+  C:/Users/vnrju/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:96 (include_boilerplate)
+  CMakeLists.txt:5 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
